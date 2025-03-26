@@ -1,10 +1,10 @@
-C:\Солихов ПР-21\PraktikaIND1_2\PraktikaIND1_2\bin\Debug\PraktikaIND1_2.exe.config
-C:\Солихов ПР-21\PraktikaIND1_2\PraktikaIND1_2\bin\Debug\PraktikaIND1_2.exe
-C:\Солихов ПР-21\PraktikaIND1_2\PraktikaIND1_2\bin\Debug\PraktikaIND1_2.pdb
-C:\Солихов ПР-21\PraktikaIND1_2\PraktikaIND1_2\obj\Debug\PraktikaIND1_2.csproj.AssemblyReference.cache
-C:\Солихов ПР-21\PraktikaIND1_2\PraktikaIND1_2\obj\Debug\PraktikaIND1_2.Form1.resources
-C:\Солихов ПР-21\PraktikaIND1_2\PraktikaIND1_2\obj\Debug\PraktikaIND1_2.Properties.Resources.resources
-C:\Солихов ПР-21\PraktikaIND1_2\PraktikaIND1_2\obj\Debug\PraktikaIND1_2.csproj.GenerateResource.cache
-C:\Солихов ПР-21\PraktikaIND1_2\PraktikaIND1_2\obj\Debug\PraktikaIND1_2.csproj.CoreCompileInputs.cache
-C:\Солихов ПР-21\PraktikaIND1_2\PraktikaIND1_2\obj\Debug\PraktikaIND1_2.exe
-C:\Солихов ПР-21\PraktikaIND1_2\PraktikaIND1_2\obj\Debug\PraktikaIND1_2.pdb
+C:\Users\Мехрдод Солихов\OneDrive\Рабочий стол\Visual Studio\PraktikaIND1_2\PraktikaIND1_2\bin\Debug\PraktikaIND1_2.exe.config
+C:\Users\Мехрдод Солихов\OneDrive\Рабочий стол\Visual Studio\PraktikaIND1_2\PraktikaIND1_2\bin\Debug\PraktikaIND1_2.exe
+C:\Users\Мехрдод Солихов\OneDrive\Рабочий стол\Visual Studio\PraktikaIND1_2\PraktikaIND1_2\bin\Debug\PraktikaIND1_2.pdb
+C:\Users\Мехрдод Солихов\OneDrive\Рабочий стол\Visual Studio\PraktikaIND1_2\PraktikaIND1_2\obj\Debug\PraktikaIND1_2.csproj.AssemblyReference.cache
+C:\Users\Мехрдод Солихов\OneDrive\Рабочий стол\Visual Studio\PraktikaIND1_2\PraktikaIND1_2\obj\Debug\PraktikaIND1_2.Form1.resources
+C:\Users\Мехрдод Солихов\OneDrive\Рабочий стол\Visual Studio\PraktikaIND1_2\PraktikaIND1_2\obj\Debug\PraktikaIND1_2.Properties.Resources.resources
+C:\Users\Мехрдод Солихов\OneDrive\Рабочий стол\Visual Studio\PraktikaIND1_2\PraktikaIND1_2\obj\Debug\PraktikaIND1_2.csproj.GenerateResource.cache
+C:\Users\Мехрдод Солихов\OneDrive\Рабочий стол\Visual Studio\PraktikaIND1_2\PraktikaIND1_2\obj\Debug\PraktikaIND1_2.csproj.CoreCompileInputs.cache
+C:\Users\Мехрдод Солихов\OneDrive\Рабочий стол\Visual Studio\PraktikaIND1_2\PraktikaIND1_2\obj\Debug\PraktikaIND1_2.exe
+C:\Users\Мехрдод Солихов\OneDrive\Рабочий стол\Visual Studio\PraktikaIND1_2\PraktikaIND1_2\obj\Debug\PraktikaIND1_2.pdb

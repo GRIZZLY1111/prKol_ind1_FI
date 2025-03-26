@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.IO;
 
 namespace PraktikaIND1_2
@@ -18,52 +19,76 @@ namespace PraktikaIND1_2
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private int? EvaluateFormula(string formula)
         {
-
-        }
-        private int EvaluateFormula(string formula)
-        {
-            var tokens = formula.Replace(" ", "").Split(new[] { '(', ')', ',' }, StringSplitOptions.RemoveEmptyEntries);
-            Stack<int> stack = new Stack<int>();
-
-            foreach (var token in tokens.Reverse())
+            Stack<int> operands = new Stack<int>();
+            for (int i = formula.Length - 1; i >= 0; i--)
             {
-                if (int.TryParse(token, out int number))
+                char current = formula[i];
+
+                if (char.IsDigit(current))
                 {
-                    stack.Push(number);
+                    operands.Push(current - '0');
                 }
-                else
+                else if (current == ')')
                 {
-                    throw new InvalidOperationException("Неверный формат формулы");
+                    continue;
+                }
+                else if (current == '(')
+                {
+                    continue;
+                }
+                else if (current == 'p' || current == 'm')
+                {
+                    if (operands.Count < 2)
+                    {
+                        return null;
+                    }
+                    int a = operands.Pop();
+                    int b = operands.Pop();
+                    int result = 0;
+                    if (current == 'p')
+                    {
+                        result = (a + b) % 10;
+                    }
+                    else if (current == 'm')
+                    {
+                        result = (a - b + 10) % 10;
+                    }
+                    operands.Push(result);
                 }
             }
-            if (stack.Count != 1)
+            if (operands.Count != 1)
             {
-                throw new InvalidOperationException("Формула составлена некорректно");
+                return null;
             }
-
-            return stack.Pop();
+            return operands.Pop();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            try
             {
-                openFileDialog.Filter = "Text files (*.txt)|*.txt";
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
+            string fileName = textBox1.Text+".txt";
+                if (!File.Exists(fileName))
                 {
-                    try
-                    {
-                        string formula = File.ReadAllText(openFileDialog.FileName);
-                        int result = EvaluateFormula(formula);
-                        textBox1.Text = $"Результат: {result}";
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show($"Ошибка: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    MessageBox.Show("Файл не найден.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
+                string formula = File.ReadAllText(fileName).Replace(" ", "");
+                int? result = EvaluateFormula(formula);
+                if (result == null)
+                {
+                    MessageBox.Show("Некорректная формула.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    textBox1.Text = $"Результат: {result}";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Произошла ошибка: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
